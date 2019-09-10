@@ -12,8 +12,8 @@ namespace ToolBoxTest
         [TestMethod]
         public void UnZipTest()
         {
-            string zipPath = "d:\\1.zip";
-            string outPath = "d:\\1";
+            string zipPath = "d:\\哈哈.zip";
+            string outPath = "d:\\我";
             bool result = TZip.UnZip(zipPath, outPath);
             Assert.IsTrue(result);
         }
