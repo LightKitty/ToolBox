@@ -10,7 +10,7 @@ namespace ToolBox
     {
         public static bool UnZip(string zipFile, string path)
         {
-            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            //Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             if (!path.EndsWith("\\") && !path.EndsWith("/")) path += "\\";
             if (!Directory.Exists(path)) Directory.CreateDirectory(path);
             using (ZipStorer zip = ZipStorer.Open(zipFile, FileAccess.Read))
