@@ -40,8 +40,8 @@ namespace ToolBox
         /// <returns>字节数组</returns>
         public static byte[] GetLocalFileByteArr(string path)
         {
-            FileStream fs = new FileStream(path, FileMode.Open);           //获取流对象
-            BinaryReader br = new BinaryReader(fs);                              //二进制读取
+            FileStream fs = new FileStream(path, FileMode.Open); //获取流对象
+            BinaryReader br = new BinaryReader(fs); //二进制读取
             return br.ReadBytes((int)br.BaseStream.Length);
         }
     }
