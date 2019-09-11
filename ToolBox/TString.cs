@@ -3,6 +3,9 @@ using System.Text.RegularExpressions;
 
 namespace ToolBox
 {
+    /// <summary>
+    /// 字符串处理
+    /// </summary>
     public static class TString
     {
         /// <summary>

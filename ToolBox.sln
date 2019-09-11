@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.92
+VisualStudioVersion = 15.0.28307.757
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBox", "ToolBox\ToolBox.csproj", "{2022188B-99BF-40ED-93B4-FCC9C6C3113B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBoxTest", "ToolBoxTest\ToolBoxTest.csproj", "{AB0AB6CF-4C8B-4C1C-936E-6660AAFA1BFC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBoxTest", "ToolBoxTest\ToolBoxTest.csproj", "{97358FBF-72F7-45F3-B8FB-19A347E047A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +17,15 @@ Global
 		{2022188B-99BF-40ED-93B4-FCC9C6C3113B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2022188B-99BF-40ED-93B4-FCC9C6C3113B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2022188B-99BF-40ED-93B4-FCC9C6C3113B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AB0AB6CF-4C8B-4C1C-936E-6660AAFA1BFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AB0AB6CF-4C8B-4C1C-936E-6660AAFA1BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AB0AB6CF-4C8B-4C1C-936E-6660AAFA1BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AB0AB6CF-4C8B-4C1C-936E-6660AAFA1BFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97358FBF-72F7-45F3-B8FB-19A347E047A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97358FBF-72F7-45F3-B8FB-19A347E047A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97358FBF-72F7-45F3-B8FB-19A347E047A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97358FBF-72F7-45F3-B8FB-19A347E047A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5CF15B5D-DB18-4A9B-9336-3B56C2134C33}
 	EndGlobalSection
 EndGlobal

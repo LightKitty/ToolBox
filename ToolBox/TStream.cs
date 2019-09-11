@@ -5,6 +5,9 @@ using System.Text;
 
 namespace ToolBox
 {
+    /// <summary>
+    /// 文件读取
+    /// </summary>
     public static class TStream
     {
         /// <summary>
