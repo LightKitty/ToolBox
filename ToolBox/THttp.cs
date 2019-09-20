@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ToolBox
 {
@@ -16,7 +14,7 @@ namespace ToolBox
     public static class THttp
     {
         /// <summary>
-        /// 简易POST请求
+        /// 简易HttpPost请求
         /// </summary>
         /// <param name="url">请求地址</param>
         /// <param name="parameters">请求参数</param>
@@ -94,6 +92,11 @@ namespace ToolBox
             return buf;
         }
 
+        /// <summary>
+        /// 简易HttpGet请求
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
         public static byte[] SimpleGet(string url)
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
