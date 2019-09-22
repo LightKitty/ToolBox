@@ -45,20 +45,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataStructure\IListDS.cs" />
+    <Compile Include="DataStructure\LinkList.cs" />
+    <Compile Include="DataStructure\Node.cs" />
+    <Compile Include="DataStructure\SeqList.cs" />
     <Compile Include="Helper\XMindAPI.cs" />
     <Compile Include="Helper\ZipStorer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TAes.cs" />
     <Compile Include="TConvert.cs" />
     <Compile Include="TCopy.cs" />
+    <Compile Include="TEncoding.cs" />
     <Compile Include="THttp.cs" />
     <Compile Include="TPath.cs" />
     <Compile Include="TStream.cs" />
     <Compile Include="TString.cs" />
+    <Compile Include="TTcpClient.cs" />
+    <Compile Include="TTcpServer.cs" />
     <Compile Include="TTiming.cs" />
     <Compile Include="TZip.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

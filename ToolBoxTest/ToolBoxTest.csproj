@@ -53,8 +53,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TAesTest.cs" />
     <Compile Include="TCopyTest.cs" />
     <Compile Include="TStringTest.cs" />
+    <Compile Include="TTest.cs" />
     <Compile Include="TTimingTest.cs" />
     <Compile Include="TZipTest.cs" />
   </ItemGroup>

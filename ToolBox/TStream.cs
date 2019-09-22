@@ -15,7 +15,7 @@ namespace ToolBox
         /// </summary>
         /// <param name="path">全路径</param>
         /// <returns>字符串</returns>
-        public static string GetAllStrFromLocalFile(string path)
+        public static string GetFileString(string path)
         {
             StreamReader sr = new StreamReader(path);
             string str = sr.ReadToEnd();
@@ -28,9 +28,9 @@ namespace ToolBox
         /// </summary>
         /// <param name="path">全路径</param>
         /// <returns>字节流</returns>
-        public static Stream GetLocalFileStream(string path)
+        public static Stream GetFileStream(string path)
         {
-            return new MemoryStream(GetLocalFileByteArr(path));
+            return new MemoryStream(GetFileByteArr(path));
         }
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace ToolBox
         /// </summary>
         /// <param name="path">全路径</param>
         /// <returns>字节数组</returns>
-        public static byte[] GetLocalFileByteArr(string path)
+        public static byte[] GetFileByteArr(string path)
         {
             FileStream fs = new FileStream(path, FileMode.Open); //获取流对象
             BinaryReader br = new BinaryReader(fs); //二进制读取
