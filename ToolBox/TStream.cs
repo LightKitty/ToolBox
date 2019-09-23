@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
+﻿using System.IO;
 
 namespace ToolBox
 {
@@ -34,7 +31,7 @@ namespace ToolBox
         }
 
         /// <summary>
-        /// 获取本地文件字节数组
+        /// 获取文件字节数组
         /// </summary>
         /// <param name="path">全路径</param>
         /// <returns>字节数组</returns>
@@ -43,6 +40,18 @@ namespace ToolBox
             FileStream fs = new FileStream(path, FileMode.Open); //获取流对象
             BinaryReader br = new BinaryReader(fs); //二进制读取
             return br.ReadBytes((int)br.BaseStream.Length);
+        }
+
+        /// <summary>
+        /// 写入文件
+        /// </summary>
+        /// <param name="dataBytes">字节数组</param>
+        /// <param name="path">路径</param>
+        public static void SaveFile(byte[] dataBytes, string path)
+        {
+            FileStream fs = new FileStream(path, FileMode.OpenOrCreate);
+            BinaryWriter bw = new BinaryWriter(fs);
+            bw.Write(dataBytes);
         }
     }
 }

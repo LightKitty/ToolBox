@@ -25,5 +25,15 @@ namespace ToolBoxTest
             string result = TAes.Decrypt("lb0rbR1W+FBpAwWTTF8DIQ==", "hello");
             Assert.AreEqual(result, "汉语");
         }
+
+        [TestMethod]
+        public void LocalFileTest()
+        {
+            byte[] score = TStream.GetFileByteArr("d:\\1.docx");
+            byte[] convert = TAes.Encrypt(score, TAes.GetAesKey("hello", 128), TAes.GetIv(TAes.defultIv), CipherMode.CFB, TAes.defaultPaddingMode);
+            TStream.SaveFile(convert, "d:\\2.docx");
+            byte[] result = TAes.Decrypt(convert, TAes.GetAesKey("hello", 128), TAes.GetIv(TAes.defultIv), CipherMode.CFB, TAes.defaultPaddingMode);
+            TStream.SaveFile(result, "d:\\3.docx");
+        }
     }
 }
