@@ -53,6 +53,7 @@
     <Compile Include="Helper\ZipStorer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TAes.cs" />
+    <Compile Include="TCommon.cs" />
     <Compile Include="TConvert.cs" />
     <Compile Include="TCopy.cs" />
     <Compile Include="TEncoding.cs" />

@@ -15,7 +15,7 @@ namespace ToolBoxTest
         public void Test1()
         {
             byte[] byteArr = TStream.GetFileByteArr("F:\\华为手机备忘录.txt");
-            string text = TConvert.GetString(byteArr);
+            string text = TConvert.BytesToString(byteArr);
         }
     }
 }
