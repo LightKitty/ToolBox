@@ -64,6 +64,7 @@
     <Compile Include="TString.cs" />
     <Compile Include="TTcpClient.cs" />
     <Compile Include="TTcpServer.cs" />
+    <Compile Include="TTime.cs" />
     <Compile Include="TTiming.cs" />
     <Compile Include="TZip.cs" />
   </ItemGroup>
