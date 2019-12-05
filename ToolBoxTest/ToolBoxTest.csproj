@@ -52,6 +52,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommonTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TAesTest.cs" />
     <Compile Include="TConvertTest.cs" />
