@@ -40,9 +40,11 @@ namespace ToolBox
                 }
             }
             byte[] data = Encoding.ASCII.GetBytes(buffer.ToString());
+            request.ContentLength = data.Length;
             using (Stream requeststream = request.GetRequestStream())
             {
                 requeststream.Write(data, 0, data.Length);
+                requeststream.Close();
             }
 
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
