@@ -60,6 +60,7 @@
     <Compile Include="TNetWorkTest.cs" />
     <Compile Include="TStringTest.cs" />
     <Compile Include="TTest.cs" />
+    <Compile Include="TTimeTest.cs" />
     <Compile Include="TTimingTest.cs" />
     <Compile Include="TZipTest.cs" />
   </ItemGroup>

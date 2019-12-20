@@ -63,6 +63,48 @@ namespace ToolBox
         }
 
         /// <summary>
+        /// 简易HttpPost请求
+        /// </summary>
+        /// <param name="url">请求地址</param>
+        /// <param name="parameters">请求参数</param>
+        /// <returns>返回值</returns>
+        public static string SimplePostString(string url, IDictionary<string, string> parameters)
+        {
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            request.Method = "POST"; //设置为post请求
+            request.ContentType = "application/x-www-form-urlencoded";
+
+            StringBuilder buffer = new StringBuilder();
+            bool flag = false;
+            foreach (string key in parameters.Keys)
+            {
+                if (flag)
+                {
+                    buffer.AppendFormat("&{0}={1}", key, parameters[key]);
+                }
+                else
+                {
+                    buffer.AppendFormat("{0}={1}", key, parameters[key]);
+                    flag = true;
+                }
+            }
+            byte[] data = Encoding.ASCII.GetBytes(buffer.ToString());
+            request.ContentLength = data.Length;
+            using (Stream requeststream = request.GetRequestStream())
+            {
+                requeststream.Write(data, 0, data.Length);
+                requeststream.Close();
+            }
+
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            Stream stream = response.GetResponseStream();
+            using (StreamReader reader = new StreamReader(stream, Encoding.UTF8))
+            {
+                return reader.ReadToEnd();
+            }
+        }
+
+        /// <summary>
         /// 简易HttpPost方法
         /// </summary>
         /// <param name="url">请求地址</param>
@@ -117,6 +159,19 @@ namespace ToolBox
                 offset += n;
             }
             return buf;
+        }
+
+        public static string SimpleGetString(string url)
+        {
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            request.Method = "GET";
+            //request.Timeout = 5000;
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            Stream stream = response.GetResponseStream();
+            using (StreamReader reader = new StreamReader(stream, Encoding.UTF8))
+            {
+                return reader.ReadToEnd();
+            }
         }
 
         /// <summary>  

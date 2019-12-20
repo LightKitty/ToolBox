@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics;
+using ToolBox;
+using System.Net;
+using System.IO;
+using System.Text;
 
 namespace ToolBoxTest
 {
@@ -49,7 +53,7 @@ namespace ToolBoxTest
 
             //字典
             sw.Restart();
-            for(int j=0;j<100;j++)
+            for (int j = 0; j < 100; j++)
             {
                 int index2 = dic[key];
             }
@@ -113,5 +117,41 @@ namespace ToolBoxTest
             sw.Stop();
             TimeSpan ts23 = sw.Elapsed;
         }
+
+        [TestMethod]
+        public void ZP58AuthTest()
+        {
+            string appKey = "b13e50cf44a0638c1b10618e2b845160";
+            string timespan = TTime.GetJsTimestampNow().ToString();
+            //string secret = "9792e56d8cf4a5535d5e3f631e6c1835";
+            string url = $"https://openapi.58.com/v2/auth/show?app_key={ appKey }&redirect_uri={ "http://www.baidu.com/" }&state={ timespan }";
+
+            var request = WebRequest.Create("https://openapi.58.com/v2/auth/show?app_key=b13e50cf44a0638c1b10618e2b845160&scopes=1,2,3,4,6&redirect_uri=http://recruitresume.tms.beisen.com/api/Channel/AuthCallback&state=H4sIAAAAAAAEAD3LsQ5AMBSF4Xc5c4cSEro1JgsLD9DETdqkLtGaxLtTwvjlP+fAQGw4thNUJmUmc4Ex0PZYoLGGmXxSUf/U3pkAhbIaKEQI9Ctx2vDu/fvvzEyf+xVKCug92pFds0x3Ac4LsCEOrnsAAAA=");
+            var response = request.GetResponse();
+
+            Stream stream = response.GetResponseStream();
+            using (StreamReader reader = new StreamReader(stream, Encoding.UTF8))
+            {
+                var result1 = reader.ReadToEnd();
+            }
+
+            var result = THttp.SimpleGetString(url);
+        }
+
+        [TestMethod]
+        public void Z58GetPhone()
+        {
+            string appKey = "b13e50cf44a0638c1b10618e2b845160";
+            string timespan = TTime.GetJsTimestampNow().ToString();
+            var request = WebRequest.Create($"https://openapi.58.com/v3/zhaopin/getaxbphone?code=6G84O0169514E4741C0A3F62FE6C30&phoneNumber=13520881111");
+            var response = request.GetResponse();
+
+            Stream stream = response.GetResponseStream();
+            using (StreamReader reader = new StreamReader(stream, Encoding.UTF8))
+            {
+                var result1 = reader.ReadToEnd();
+            }
+        }
     }
 }
+
