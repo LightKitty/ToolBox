@@ -57,12 +57,14 @@
     <Compile Include="TAesTest.cs" />
     <Compile Include="TConvertTest.cs" />
     <Compile Include="TCopyTest.cs" />
+    <Compile Include="THttpTest.cs" />
     <Compile Include="TNetWorkTest.cs" />
     <Compile Include="TStringTest.cs" />
     <Compile Include="TTest.cs" />
     <Compile Include="TTimeTest.cs" />
     <Compile Include="TTimingTest.cs" />
     <Compile Include="TZipTest.cs" />
+    <Compile Include="ShiXiSengTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

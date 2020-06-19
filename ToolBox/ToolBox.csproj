@@ -58,6 +58,7 @@
     <Compile Include="TCopy.cs" />
     <Compile Include="TEncoding.cs" />
     <Compile Include="THttp.cs" />
+    <Compile Include="TMD5.cs" />
     <Compile Include="TNetWork.cs" />
     <Compile Include="TPath.cs" />
     <Compile Include="TStream.cs" />
