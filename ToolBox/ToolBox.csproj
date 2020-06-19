@@ -61,6 +61,7 @@
     <Compile Include="TMD5.cs" />
     <Compile Include="TNetWork.cs" />
     <Compile Include="TPath.cs" />
+    <Compile Include="TScript.cs" />
     <Compile Include="TStream.cs" />
     <Compile Include="TString.cs" />
     <Compile Include="TTcpClient.cs" />
