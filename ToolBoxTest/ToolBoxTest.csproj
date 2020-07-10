@@ -58,6 +58,7 @@
     <Compile Include="TConvertTest.cs" />
     <Compile Include="TCopyTest.cs" />
     <Compile Include="THttpTest.cs" />
+    <Compile Include="TJsonTest.cs" />
     <Compile Include="TNetWorkTest.cs" />
     <Compile Include="TStringTest.cs" />
     <Compile Include="TTest.cs" />
