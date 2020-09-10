@@ -13,7 +13,7 @@ namespace ToolBoxTest
     /// CommonTest 的摘要说明
     /// </summary>
     [TestClass]
-    public class CommonTest
+    public class TCommonTest
     {
         [TestMethod]
         public void DictionaryTest()

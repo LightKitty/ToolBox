@@ -60,7 +60,7 @@
     <Compile Include="THttp.cs" />
     <Compile Include="TJson.cs" />
     <Compile Include="TMD5.cs" />
-    <Compile Include="TNetWork.cs" />
+    <Compile Include="TNet.cs" />
     <Compile Include="TPath.cs" />
     <Compile Include="TScript.cs" />
     <Compile Include="TStream.cs" />
