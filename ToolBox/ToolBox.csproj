@@ -69,6 +69,7 @@
     <Compile Include="TTcpServer.cs" />
     <Compile Include="TTime.cs" />
     <Compile Include="TTiming.cs" />
+    <Compile Include="TXml.cs" />
     <Compile Include="TZip.cs" />
   </ItemGroup>
   <ItemGroup>
