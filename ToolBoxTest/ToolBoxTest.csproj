@@ -65,7 +65,6 @@
     <Compile Include="TTimeTest.cs" />
     <Compile Include="TTimingTest.cs" />
     <Compile Include="TZipTest.cs" />
-    <Compile Include="THttpTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
