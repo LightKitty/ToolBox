@@ -9,14 +9,14 @@ using ToolBox;
 namespace ToolBoxTest
 {
     [TestClass]
-    public class TNetWorkTest
+    public class TNetTest
     {
         [TestMethod]
         public void GetIpAddressTest()
         {
-            var result = TNetWork.GetIpAddress();
-            result = TNetWork.GetIpAddress();
-            result = TNetWork.GetIpAddress(true);
+            var result = TNet.GetIpAddress();
+            result = TNet.GetIpAddress();
+            result = TNet.GetIpAddress(true);
         }
     }
 }

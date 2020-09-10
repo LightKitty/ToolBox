@@ -72,23 +72,24 @@ namespace ToolBox
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.Method = "POST"; //设置为post请求
-            request.ContentType = "application/x-www-form-urlencoded";
+            request.ContentType = "application/json";
 
             StringBuilder buffer = new StringBuilder();
-            bool flag = false;
-            foreach (string key in parameters.Keys)
-            {
-                if (flag)
-                {
-                    buffer.AppendFormat("&{0}={1}", key, parameters[key]);
-                }
-                else
-                {
-                    buffer.AppendFormat("{0}={1}", key, parameters[key]);
-                    flag = true;
-                }
-            }
-            byte[] data = Encoding.ASCII.GetBytes(buffer.ToString());
+            //bool flag = false;
+            //foreach (string key in parameters.Keys)
+            //{
+            //    if (flag)
+            //    {
+            //        buffer.AppendFormat("&{0}={1}", key, parameters[key]);
+            //    }
+            //    else
+            //    {
+            //        buffer.AppendFormat("{0}={1}", key, parameters[key]);
+            //        flag = true;
+            //    }
+            //}
+            buffer.Append("{\"queryParams\": { \"personIds\": \"[122]\"}  ");
+            byte[] data = Encoding.UTF8.GetBytes(buffer.ToString());
             request.ContentLength = data.Length;
             using (Stream requeststream = request.GetRequestStream())
             {

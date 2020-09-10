@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ToolBox
 {
-    public static class TNetWork
+    public static class TNet
     {
         private static string IP { get; set; }
 
