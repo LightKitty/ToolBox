@@ -15,8 +15,11 @@ namespace ToolBoxTest
         [TestMethod]
         public void TestMethod1()
         {
-            long jsTime = 1608465145812;
-            DateTime time = TTime.JsTimestampToDatetime(jsTime);
+            DateTime time = DateTime.Now.AddDays(1);
+            long jsTime = TTime.GetJsTimestamp(time);
+
+            //long jsTime = 1608465145812;
+            //DateTime time = TTime.JsTimestampToDatetime(jsTime);
         }
     }
 }

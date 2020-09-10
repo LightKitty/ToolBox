@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{97358FBF-72F7-45F3-B8FB-19A347E047A7}</ProjectGuid>
+    <ProjectGuid>{FC9AD0AB-C7A6-4D4C-A752-5C975CA8AB2A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ToolBoxTest</RootNamespace>
@@ -63,6 +63,7 @@
     <Compile Include="TTimeTest.cs" />
     <Compile Include="TTimingTest.cs" />
     <Compile Include="TZipTest.cs" />
+    <Compile Include="THttpTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
