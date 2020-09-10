@@ -65,7 +65,6 @@
     <Compile Include="TTimeTest.cs" />
     <Compile Include="TTimingTest.cs" />
     <Compile Include="TZipTest.cs" />
-    <Compile Include="ShiXiSengTest.cs" />
     <Compile Include="THttpTest.cs" />
   </ItemGroup>
   <ItemGroup>
