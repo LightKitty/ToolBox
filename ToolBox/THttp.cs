@@ -175,6 +175,20 @@ namespace ToolBox
             }
         }
 
+        public static string SimpleGetString(string url, string cookie)
+        {
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            request.Method = "GET";
+            request.Headers.Add("Cookie", cookie);
+            //request.Timeout = 5000;
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            Stream stream = response.GetResponseStream();
+            using (StreamReader reader = new StreamReader(stream, Encoding.UTF8))
+            {
+                return reader.ReadToEnd();
+            }
+        }
+
         /// <summary>  
         /// 创建GET方式的HTTP请求  
         /// </summary>  
