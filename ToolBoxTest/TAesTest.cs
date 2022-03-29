@@ -12,6 +12,9 @@ namespace ToolBoxTest
     [TestClass]
     public class TAesTest
     {
+        /// <summary>
+        /// 
+        /// </summary>
         [TestMethod]
         public void EncryptTest()
         {
