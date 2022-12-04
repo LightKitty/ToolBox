@@ -18,7 +18,7 @@ namespace ToolBox
         /// <returns>替换后结果</returns>
         public static string ReplaceAllSymbol(string s,string replacement)
         {
-            return Regex.Replace(s, "[^\u4e00-\u9fa50-9a-zA-Z]+", "");
+            return Regex.Replace(s, "[^\u4e00-\u9fa50-9a-zA-Z]+", replacement);
         }
 
         /// <summary>

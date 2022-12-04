@@ -4,18 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A6DC97B1-5077-4594-99B1-71F27C4452F3}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ToolBox</RootNamespace>
-    <AssemblyName>ToolBox</AssemblyName>
+    <ProjectGuid>{1A882404-2464-44C1-B4F0-498A2A215A26}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ToolBox.Console</RootNamespace>
+    <AssemblyName>ToolBox.Console</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
-    <TargetFrameworkProfile />
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -25,18 +23,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\ToolBox.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,37 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataStructure\IListDS.cs" />
-    <Compile Include="DataStructure\LinkList.cs" />
-    <Compile Include="DataStructure\Node.cs" />
-    <Compile Include="DataStructure\SeqList.cs" />
-    <Compile Include="Helper\XMindAPI.cs" />
-    <Compile Include="Helper\ZipStorer.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TAes.cs" />
-    <Compile Include="TCommon.cs" />
-    <Compile Include="TConvert.cs" />
-    <Compile Include="TCopy.cs" />
-    <Compile Include="TEncoding.cs" />
-    <Compile Include="THttp.cs" />
-    <Compile Include="TJson.cs" />
-    <Compile Include="TMD5.cs" />
-    <Compile Include="TNet.cs" />
-    <Compile Include="TPath.cs" />
-    <Compile Include="TScript.cs" />
-    <Compile Include="TStream.cs" />
-    <Compile Include="TString.cs" />
-    <Compile Include="TTcpClient.cs" />
-    <Compile Include="TTcpServer.cs" />
-    <Compile Include="TTime.cs" />
-    <Compile Include="TTiming.cs" />
-    <Compile Include="TWait.cs" />
-    <Compile Include="TWindowsApi.cs" />
-    <Compile Include="TXml.cs" />
-    <Compile Include="TZip.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ToolBox\ToolBox.csproj">
+      <Project>{a6dc97b1-5077-4594-99b1-71f27c4452f3}</Project>
+      <Name>ToolBox</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
