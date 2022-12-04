@@ -15,6 +15,14 @@ namespace ToolBoxTest
         [TestMethod]
         public void EncryptTest()
         {
+            DateTime date1 = new DateTime(2022, 3, 14);
+            DateTime date2 = new DateTime(2022, 11, 30);
+            var days = (date2 - date1).TotalDays;
+
+            //DateTime date1 = new DateTime(2015, 11, 30);
+            //DateTime date2 = new DateTime(2022, 9, 22);
+            //var days = (date2 - date1).TotalDays;
+
             string result = TAes.Encrypt("汉语", "hello");
             Assert.AreEqual(result, "lb0rbR1W+FBpAwWTTF8DIQ==");
         }
